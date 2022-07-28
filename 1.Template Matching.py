@@ -1,14 +1,4 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 import cv2
-
-
-# In[2]:
-
 
 image = cv2.imread('image.jpg')
 cv2.imshow('image',image)
@@ -32,10 +22,3 @@ cv2.rectangle(image , top_left , bottom_left , (0,0,255), 2)
 cv2.imshow('Object Found :' , image)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-
-
-# In[ ]:
-
-
-
-
