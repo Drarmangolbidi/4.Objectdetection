@@ -6,6 +6,10 @@ In this repository i try to detect object
 
 <br>
 
+![1A](https://user-images.githubusercontent.com/109248678/181452436-8102b8b9-f651-4435-8111-d80ddef126f1.jpg)
+
+<br>
+
 download "the_guy.jpg","image.jpg" and "Template Matching.py" . 
 
 <br>
