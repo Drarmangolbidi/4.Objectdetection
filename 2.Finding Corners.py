@@ -1,15 +1,6 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
 
 
 import cv2
-
-
-# In[4]:
-
-
 img = cv2.imread('chess.jpg')
 gray = cv2.cvtColor(img , cv2.COLOR_BGR2GRAY)
 
