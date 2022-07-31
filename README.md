@@ -116,3 +116,18 @@ cv2.destroyAllWindows()
 - [ ] Intermediate!
 - [x] Hard!
 
+<br>
+
+## :blush:Step Three :( Kinds of algoritm of the image processing ):blush:</b>
+
+<br>
+1.Template Matching (weak)
+<br>
+2.Feature from accelerated segments (Fast)
+<br>
+3.Binary Robust independent elementary ( BRIEF)
+<br>
+4.Oriented Fast and Rotated BRIEF (ORB) 
+<br>
+
+
