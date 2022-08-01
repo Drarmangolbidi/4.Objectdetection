@@ -148,11 +148,57 @@ After that you should know we have some way to object tracking
 
 <br>
 
+https://user-images.githubusercontent.com/109248678/182132260-8f7e5554-d3d3-41fc-952f-72f3a551e6ba.mp4
+
+<br>
+
 Install ( pip install opencv-contrib-python) for object tracking tools . 
 <br>
 ```python
 pip install opencv-contrib-python==3.4.13.47
 ```
 <br>
+Download "3.Object Tracking.py" and Play it :
+<br>
+```python
+import cv2
+
+cap = cv2.VideoCapture(0)
+
+tracker = cv2.TrackerMOSSE_create()
+
+ret , frame = cap.read()
+
+bbox = cv2.selectROI('Tracking' , frame , False)
+
+tracker.init(frame,bbox)
+
+def drawBox(img , bbox):
+    x,y,w,h = int(bbox[0]) , int(bbox[1]) ,int(bbox[2]) ,int(bbox[3])
+    cv2.rectangle(img , (x,y) , ((x+w),(y+h)) , (255,0,255) , 3)
+    cv2.putText(img , "tracking" , (100,75), cv2.FONT_HERSHEY_SIMPLEX , 0.7 , (0,255,0) , 2)
+       
+while True:
+    ret , img = cap.read()
+    ret , bbox = tracker.update(img)
+    
+    if ret:
+        drawBox(img , bbox)
+    else:
+        cv2.putText(img , "LOST" , (100,75), cv2.FONT_HERSHEY_SIMPLEX , 0.7 , (0,255,0) , 2)
+        
+    cv2.imshow('Tracking' , img)
+    if cv2.waitKey(1) & 0xFF ==ord('q'):
+        break
+                
+cap.release()
+cv2.destroyAllWindows()
+```
+<br>
+
+#### EX3_Leve :
+- [ ] Simple! 
+- [ ] Intermediate!
+- [x] Hard!
 
 <br>
