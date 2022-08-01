@@ -143,3 +143,11 @@ After that you should know we have some way to object tracking
 <br>
 3. Tracking learning detection (TLD)
 <br>
+
+## :blush:Step Four :( Object tracking Ways ):blush:</b>
+
+<br>
+
+Install ( pip install opencv-contrib-python) for object tracking tools . 
+
+<br>
