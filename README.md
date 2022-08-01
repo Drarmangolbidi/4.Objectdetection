@@ -137,15 +137,9 @@ After that you should know we have some way to object tracking
 ## :blush:Step Four :( Object tracking Ways ):blush:</b>
 
 <br>
-
 1.boosting tracker
-
 <br>
-
 2.kernel and Scale Adaptation 
-
 <br>
-
 3. Tracking learning detection (TLD)
-
 <br>
