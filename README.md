@@ -137,11 +137,21 @@ After that you should know we have some way to object tracking
 ## :blush:Step Four :( Object tracking Ways ):blush:</b>
 
 <br>
-1.boosting tracker
+1.BOOSTING Tracker
 <br>
-2.kernel and Scale Adaptation 
+2.MIL Tracker
 <br>
-3. Tracking learning detection (TLD)
+3. KCF Tracker
+<br>
+4.CSRT Tracker
+<br>
+5.MedianFlow Tracker
+<br>
+6.TLD Tracker
+<br>
+7.MOSSE Tracker
+<br>
+8.GOTURN Tracker
 <br>
 
 ## :blush:Step Five :( Object tracking Ways with webcam ):blush:</b>
