@@ -130,4 +130,22 @@ cv2.destroyAllWindows()
 4.Oriented Fast and Rotated BRIEF (ORB) 
 <br>
 
+After that you should know we have some way to object tracking 
 
+<br>
+
+## :blush:Step Four :( Object tracking Ways ):blush:</b>
+
+<br>
+
+1.boosting tracker
+
+<br>
+
+2.kernel and Scale Adaptation 
+
+<br>
+
+3. Tracking learning detection (TLD)
+
+<br>
