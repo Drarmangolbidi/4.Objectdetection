@@ -1,15 +1,5 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
 
 import cv2
-
-
-# In[2]:
-
-
 def ask_for_tracker():
     print("Choose The Tracker: ")
     print('Enter 0 For Boosting ')
@@ -31,66 +21,25 @@ def ask_for_tracker():
         tracker = cv2.TrackerMedianFlow_create()    
     return tracker    
 
-
-# In[3]:
-
-
-tracker = ask_for_tracker()
-
-
-# In[4]:
-
-
-tracker
-
-
-# In[5]:
-
-
-str(tracker).split()[0][1:]
-
-
-# In[8]:
-
-
 tracker = ask_for_tracker()
 tracker_name = str(tracker).split()[0][1:]
-
 cap = cv2.VideoCapture(0)
-
 ret, frame = cap.read()
-
 roi = cv2.selectROI(frame, False)
-
 ret = tracker.init(frame, roi)
-
 while True:
-    ret, frame = cap.read()
-    
-    success, roi = tracker.update(frame)
-    
+    ret, frame = cap.read()  
+    success, roi = tracker.update(frame) 
     (x,y,w,h) = tuple(map(int,roi))
-    
     if success:
         p1 = (x, y)
         p2 = (x+w, y+h)
         cv2.rectangle(frame, p1, p2, (0,255,0), 3)
     else :
         cv2.putText(frame, "Failure to Detect Tracking!!", (100,200), cv2.FONT_HERSHEY_SIMPLEX, 1,(0,0,255),3)
-
     cv2.putText(frame, tracker_name, (20,400), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,255,0),3);
-
     cv2.imshow(tracker_name, frame)
-
     if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
-        
+        break        
 cap.release()
 cv2.destroyAllWindows()
-
-
-# In[ ]:
-
-
-
-
